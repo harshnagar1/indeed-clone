@@ -8,7 +8,7 @@ public class PostDTO {
 
     private String type;
 
-    private String description ;
+    private String description;
 
     private String technology[];
 

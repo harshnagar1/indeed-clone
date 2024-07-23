@@ -5,6 +5,7 @@ import {
   Card,
   CardContent,
   InputBase,
+  ListItem,
   styled,
   Typography,
 } from '@mui/material';
@@ -78,7 +79,7 @@ const AllPosts = () => {
                   <b>Experience:</b> {post.experience}
                 </Typography>
                 <Typography>
-                  <b>Technology:</b> {post.technology}
+                  <b>Technology:</b> {post.technology.join(' , ')}
                 </Typography>
                 <Typography>
                   <b>Salary:</b> {post.salary}{' '}

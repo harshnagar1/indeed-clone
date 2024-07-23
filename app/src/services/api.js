@@ -1,10 +1,10 @@
 import axios from 'axios';
 
-const API_URL = 'http://localhost:8080';
+const server_url = import.meta.env.VITE_SERVER_URL;
 
 export const savePost = async (payload) => {
   try {
-    return await axios.post(`${API_URL}/post`, payload, {
+    return await axios.post(`${server_url}/post`, payload, {
       headers: {
         'Content-Type': 'application/json',
       },
@@ -17,7 +17,7 @@ export const savePost = async (payload) => {
 
 export const getAllPost = async () => {
   try {
-    return await axios.get(`${API_URL}/posts`, {
+    return await axios.get(`${server_url}/posts`, {
       headers: {
         'Content-Type': 'application/json',
       },
